@@ -28,7 +28,7 @@ class DPO:
     def dpo_loss(self, policy_logps, ref_logps):
         """
         计算公式L_{DPO}(\pi_{\theta};\pi_{ref}) = -E[log sigmoid(\beta[log(\pi_\theta(y_w|x)/\pi_{ref}(y_w|x) -  log(\pi_\theta(y_l|x)/\pi_{ref}(y_l|x))])]
-        详细过程可以看博客：
+        详细过程可以看博客：https://zhuanlan.zhihu.com/p/702774357
         :param policy_logps: 策略模型的logps
         :param ref_logps: 参考模型的logps
         :return: loss
