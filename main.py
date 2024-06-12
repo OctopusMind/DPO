@@ -25,7 +25,6 @@ class TrainDpo:
 
     def train_dpo(self):
         for epoch in range(self.config.epochs):
-            print("adfkakf", epoch)
             for batch_data in self.data_loader:
                 ref_logits = self.reference_model(batch_data["inputs_ids"], batch_data["inputs_masks"])  # 获得参考模型的logit
                 self.dpo.train(batch_data["inputs_ids"], batch_data["inputs_masks"], ref_logits,
